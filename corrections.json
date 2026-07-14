@@ -1,0 +1,112 @@
+{
+  "invoice_0.jpg": {
+    "invoice_number": "40378170",
+    "vendor_name": "Patel, Thompson and Montgomery",
+    "vendor_address": "356 Kyle Vista New James, MA 46228",
+    "customer_name": "Jackson, Odonnell and Jackson",
+    "customer_address": "267 John Track Suite 841 Jenniferville, PA 98601",
+    "total_amount": 8.25,
+    "subtotal": 7.50,
+    "tax_amount": 0.75,
+    "currency": "$"
+  },
+  "invoice_1.jpg": {
+    "invoice_number": "61356291",
+    "vendor_name": "Chapman, Kim and Green",
+    "vendor_address": "64731 James Branch Smithmouth, NC 26872",
+    "customer_name": "Rodriguez-Stevens",
+    "customer_address": "2280 Angela Plain Hortonshire, MS 93248",
+    "total_amount": 212.09,
+    "subtotal": 192.81,
+    "tax_amount": 19.28,
+    "currency": "$"
+  },
+  "invoice_2.jpg": {
+    "invoice_number": "49565075",
+    "vendor_name": "Kane-Morgan",
+    "vendor_address": "968 Carr Mission Apt. 320 Bernardville, VA 28211",
+    "customer_name": "Garcia Inc",
+    "customer_address": "445 Haas Viaduct Suite 454 Michaelhaven, LA 32852",
+    "total_amount": 96.73,
+    "subtotal": 87.94,
+    "tax_amount": 8.79,
+    "currency": "$"
+  },
+  "invoice_3.jpg": {
+    "invoice_number": "95611677",
+    "vendor_name": "Franco Group",
+    "vendor_address": "796 Arnold Cove Apt. 091 Reginaport, AZ 06940",
+    "customer_name": "Johnson Group",
+    "customer_address": "0693 Robin Mountain Apt. 180 Lake Christina, MI 87634",
+    "total_amount": 958.27,
+    "subtotal": 871.15,
+    "tax_amount": 87.12,
+    "currency": "$"
+  },
+  "invoice_4.jpg": {
+    "invoice_number": "26020078",
+    "vendor_name": "Johnson, Coleman and Mccarthy",
+    "vendor_address": "Unit 1928 Box 1473 DPO AA 74927",
+    "customer_name": "Ochoa, Crane and Johnston",
+    "customer_address": "537 Johnson Rapid Suite 176 Morrowmouth, AK 77182",
+    "total_amount": 116.52,
+    "subtotal": 105.93,
+    "tax_amount": 10.59,
+    "currency": "$"
+  },
+  "invoice_5.jpg": {
+    "invoice_number": "42485588",
+    "vendor_name": "Zuniga and Sons",
+    "vendor_address": "455 Jones Trace Suite 479 Port Sarah, NM 29233",
+    "customer_name": "Knight-Brown",
+    "customer_address": "316 Garrett Valleys Lake John, LA 21710",
+    "total_amount": 194.92,
+    "subtotal": 177.20,
+    "tax_amount": 17.72,
+    "currency": "$"
+  },
+  "invoice_6.jpg": {
+    "invoice_number": "94689364",
+    "vendor_name": "Schwartz, Flynn and Jackson",
+    "vendor_address": "59888 Dawn Valley Suite 242 New Marilyn, WA 49740",
+    "customer_name": "Wilson PLC",
+    "customer_address": "674 Leon Cape Suite 819 Burtonstad, NE 12662",
+    "total_amount": 33776.06,
+    "subtotal": 30705.51,
+    "tax_amount": 3070.55,
+    "currency": "$"
+  },
+  "invoice_7.jpg": {
+    "invoice_number": "2876",
+    "vendor_name": "Stone-Ruiz",
+    "vendor_address": "938 Dillon Views Suite 267 Doyleport, SC 14345",
+    "customer_name": "Chapman-Pineda",
+    "customer_address": "8840 Daniel Coves Suite 235 Pattersonton, HI 63052",
+    "total_amount": 4618.75,
+    "subtotal": 4198.86,
+    "tax_amount": 419.89,
+    "currency": "$"
+  },
+  "invoice_8.jpg": {
+    "invoice_number": "48402876",
+    "vendor_name": "Stone-Ruiz",
+    "vendor_address": "938 Dillon Views Suite 267 Doyleport, SC 14345",
+    "customer_name": "Chapman-Pineda",
+    "customer_address": "8840 Daniel Coves Suite 235 Pattersonton, HI 63052",
+    "total_amount": 131.98,
+    "subtotal": 119.98,
+    "tax_amount": 11.99,
+    "currency": "$"
+  },
+  "invoice_9.jpg": {
+    "invoice_number": "86268868",
+    "vendor_name": "Harrison and Sons",
+    "vendor_address": "8716 Tiffany Crescent Markfurt, NH 79626",
+    "customer_name": "Adams, Holmes and Cruz",
+    "customer_address": "096 Bradley Forge Suite 047 Samanthabury, TN 88715",
+    "total_amount": 33587.47,
+    "subtotal": 30534.06,
+    "tax_amount": 3053.41,
+    "currency": "$"
+  }
+}
