@@ -35,36 +35,30 @@ This project is a production‑ready AI pipeline that extracts structured data f
 ---
 
 ## 🏗️ Architecture
-┌─────────────────────┐
-│ Input Invoices │ (JPG, PNG, PDF)
-│ (input_invoices/) │
-└──────────┬──────────┘
-▼
-┌─────────────────────┐
-│ Granite 3.2 │ (Vision-Language Model via Ollama)
-│ Vision 2B │
-└──────────┬──────────┘
-▼
-┌─────────────────────┐
-│ Text Extraction │ (JSON Parsing + Regex Fallback)
-└──────────┬──────────┘
-▼
-┌─────────────────────┐
-│ Validation │ (Confidence scoring, error detection)
-└──────────┬──────────┘
-▼
-┌─────────────────────┐
-│ Output │ (JSON + CSV + Excel + Dashboard)
-│ (output_data/) │
-└─────────────────────┘
 
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryTextColor': '#000000', 'primaryColor': '#f0f0f0', 'primaryBorderColor': '#333333', 'lineColor': '#1a73e8', 'tertiaryColor': '#ffffff'}}}%%
+flowchart TD
+    A[📄 Input Invoices<br>input_invoices/] --> B[🤖 Granite 3.2 Vision 2B<br>via Ollama]
+    B --> C[📝 Text Extraction<br>JSON Parsing + Regex Fallback]
+    C --> D[✅ Validation<br>Confidence scoring & error detection]
+    D --> E[📊 Output<br>JSON + CSV + Excel + Dashboard]
+    
+    style A fill:#e8f4f8,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#d4edda,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#fff3cd,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#f8d7da,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#cce5ff,stroke:#333,stroke-width:2px,color:#000
+```
+
+**Pipeline Steps:**
 
 1. **Input** → `input_invoices/` (JPG, PNG, PDF)
 2. **AI Processing** → Granite 3.2 Vision 2B via Ollama
 3. **Text Extraction** → JSON Parsing + Regex Fallback
 4. **Validation** → Confidence scoring & error detection
 5. **Output** → JSON, CSV, Excel, and Dashboard (`output_data/`)
----
+
 
 ## 📊 Fields Extracted
 
@@ -127,5 +121,18 @@ python run_enhanced.py --batch-size 5
 
 # 7. Start the web dashboard
 python app_simple.py
+```
+
+---
+
+## 📄 License
+
+MIT License – feel free to use, modify, and distribute.
+
+---
+
+## 📬 Contact
+
+**Shubhanshu Pratap Singh** – [GitHub](https://github.com/tsar-king)
 
 Project Link: [https://github.com/tsar-king/invoice-processing-pipeline](https://github.com/tsar-king/invoice-processing-pipeline)
