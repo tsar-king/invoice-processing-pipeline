@@ -1,0 +1,43 @@
+# requirements.txt - For invoice_pipeline environment
+# Python 3.10+
+
+# Core Dependencies
+requests>=2.31.0
+Pillow>=10.0.0
+pandas>=2.0.0
+
+# Data & Analysis
+numpy>=1.24.0
+openpyxl>=3.1.0
+matplotlib>=3.7.0
+
+# New: Utilities for Phase 2
+python-dotenv>=1.0.0      # For .env configuration
+tqdm>=4.66.0              # For progress bars
+pdf2image>=1.16.0         # For PDF support
+loguru>=0.7.0             # For better logging
+
+# Development (optional)
+pytest>=7.0.0
+black>=23.0.0
+
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+
+# Frontend
+jinja2>=3.1.0
+aiofiles>=23.2.0
+
+# Existing dependencies
+requests>=2.31.0
+Pillow>=10.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+matplotlib>=3.7.0
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+pdf2image>=1.16.0
+loguru>=0.7.0

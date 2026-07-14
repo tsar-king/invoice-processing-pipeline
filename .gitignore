@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Outputs (keep samples, ignore processed data)
+output_data/
+*.csv
+*.json
+*.log
+*.png
+logs/*.log
+!output_data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+*.env
+
+# Environment
+.env
+*.pem
+
+uploads/
+.env
+*.tmp
+
+# Large files (ignore invoice images)
+input_invoices/*.jpg
+input_invoices/*.jpeg
+input_invoices/*.png
+input_invoices/*.pdf
+!input_invoices/.gitkeep
+
+# Model files (too large for Git)
+*.gguf
+*.bin
+*.safetensors

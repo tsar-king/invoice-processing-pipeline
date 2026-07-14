@@ -1,0 +1,96 @@
+<!-- web/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Processing Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📊 Invoice Processing Dashboard</h1>
+            <p>AI-powered invoice extraction with Granite 3.2 Vision</p>
+            <div class="header-actions">
+                <button onclick="location.reload()">🔄 Refresh</button>
+                <button onclick="exportExcel()">📥 Export Excel</button>
+                <button onclick="processBatch()">⚡ Process All</button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalInvoices">-</div>
+                <div class="stat-label">Total Invoices</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalValue">-</div>
+                <div class="stat-label">Total Value ($)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgValue">-</div>
+                <div class="stat-label">Average Value ($)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="vendorsCount">-</div>
+                <div class="stat-label">Unique Vendors</div>
+            </div>
+        </section>
+
+        <!-- Charts Row -->
+        <section class="charts-row">
+            <div class="chart-container">
+                <h3>Invoice Amounts</h3>
+                <canvas id="amountsChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Top Vendors</h3>
+                <canvas id="vendorsChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Invoice Table -->
+        <section class="table-section">
+            <h3>📋 Recent Invoices</h3>
+            <div class="table-container">
+                <table id="invoiceTable">
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Date</th>
+                            <th>Vendor</th>
+                            <th>Total</th>
+                            <th>Currency</th>
+                            <th>Validation</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoiceTableBody">
+                        <tr><td colspan="7" class="loading">Loading invoices...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <h3>📤 Upload New Invoice</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" required>
+                <button type="submit">📤 Upload & Process</button>
+                <div id="uploadStatus"></div>
+            </form>
+        </section>
+
+        <footer>
+            <p>Powered by Granite 3.2 Vision 2B | Local AI Processing</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

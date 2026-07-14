@@ -1,0 +1,68 @@
+<!-- web/templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 Invoice Details</h1>
+            <p>View extracted data for each invoice</p>
+            <div class="header-actions">
+                <button onclick="window.location.href='/'">🏠 Back to Dashboard</button>
+            </div>
+        </header>
+
+        <section class="results-section">
+            <div id="resultsContent">
+                <div class="loading">Loading invoice details...</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by Granite 3.2 Vision 2B | Local AI Processing</p>
+        </footer>
+    </div>
+
+    <script>
+        // Load invoice details from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const invoiceId = urlParams.get('id');
+        
+        if (invoiceId) {
+            fetch(`/api/invoices/${invoiceId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('resultsContent');
+                    container.innerHTML = `
+                        <div class="invoice-detail">
+                            <h2>Invoice: ${data.invoice_number || 'N/A'}</h2>
+                            <table class="detail-table">
+                                ${Object.entries(data).filter(([key]) => !key.startsWith('_')).map(([key, value]) => `
+                                    <tr>
+                                        <td><strong>${key.replace(/_/g, ' ').toUpperCase()}</strong></td>
+                                        <td>${value || 'N/A'}</td>
+                                    </tr>
+                                `).join('')}
+                            </table>
+                            <button onclick="window.location.href='/'">🏠 Back to Dashboard</button>
+                        </div>
+                    `;
+                })
+                .catch(error => {
+                    document.getElementById('resultsContent').innerHTML = `
+                        <div class="error">Error loading invoice: ${error.message}</div>
+                    `;
+                });
+        } else {
+            document.getElementById('resultsContent').innerHTML = `
+                <div class="error">No invoice ID provided</div>
+            `;
+        }
+    </script>
+</body>
+</html>
